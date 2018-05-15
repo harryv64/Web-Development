@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+  <form id="frm1" action="Calculate.html">
+    <table border>
+      <tbody>
+        <tr>
+            <th colspan="2">Morgage Calculator</th>
+        </tr>
+        <tr>
+          <td>Loan($):</td>
+          <td>
+            <input type="number" id="LoanAmount">
+          </td>
+        </tr>
+        <tr>
+          <td>Anual Rate(as decimal):</td>
+          <td>
+            <input type="number" id="AnualRate">
+          </td>
+        </tr>
+        <tr>
+          <td>Years:</td>
+          <td>
+            <input type="number" id="Years">
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </input>
+  <input type="button" onclick="Calculate()" value="Calculate"></input>
+    <h4>Monthly Pay Rate:</h4>
+    <p id="test"></p>
+  <script>
+  function Calculate() {
+          var Loan = document.getElementById("LoanAmount").value;
+          var ARate = document.getElementById("AnualRate").value;
+          var Years = document.getElementById("Years").value;
+          var monthrate = ARate/12;
+          var monthpay = Loan*monthrate/(1- 1/(1+monthrate)**(Years*12));
+          document.getElementById("test").innerHTML = monthpay;
+      }
+</script>
+</body>
+</html>

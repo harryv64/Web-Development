@@ -1,0 +1,1 @@
+Simple morgage calculator using javascript and html

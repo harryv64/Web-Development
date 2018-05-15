@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+  <form action="cgi-bin/mortgage_cgi.pl" method="get">
+    <table border>
+      <tbody>
+        <tr>
+            <th colspan="2">Morgage Calculator</th>
+        </tr>
+        <tr>
+          <td>Loan($):</td>
+          <td>
+            <input type="number" id="LoanAmount">
+          </td>
+        </tr>
+        <tr>
+          <td>Anual Rate(as decimal):</td>
+          <td>
+            <input type="number" id="AnualRate">
+          </td>
+        </tr>
+        <tr>
+          <td>Years:</td>
+          <td>
+            <input type="number" id="Years">
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </input>
+  <input type="button" onclick="Calculate('/~vija3050/cgi-bin/mortgage_cgi.pl')" value="Calculate"></input>
+    <h4>Monthly Pay Rate:</h4>
+    <p id="test"></p>
+  <script>
+  function Calculate(link) {
+		var anualIntrest = document.getElementById("AnualRate").value;
+		var loanAmount = document.getElementById("LoanAmount").value;
+		var years = document.getElementById("Years").value;
+		var xhttp = new XMLHttpRequest();
+		xhttp.onreadystatechange = function(){
+			if (this.readyState == 4 && this.status == 200){
+				document.getElementById('test').innerHTML = xhttp.response;
+			}
+		}
+		xhttp.open("GET", link+"?loanAmount="+loanAmount+"&anualIntrest="+anualIntrest+"&years="+years, true);
+		xhttp.send();
+      }
+	  
+</script>
+</body>
+</html>

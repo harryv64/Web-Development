@@ -1,0 +1,29 @@
+<?xml version = "1.0"?>
+<!DOCTYPE bookself SYSTEM "bookself.dtd">
+<?xml-stylesheet type = "text/css" href = "bookself.css"?>
+<bookself>
+<book>
+ <author>Robert W. Sebesta</author>
+ <title>Programming the World Wide Web, 5rd edition</title>
+ <publisher>Addison Wesley</publisher>
+ <publishdate>2009</publishdate>
+ <description>Reference book for cp476</description>
+ <location>https://www.amazon.com/Programming-World-Wide-Web-2009/dp/0136076637</location>
+</book>
+<book>
+ <author>MICHAEL SIPSER</author>
+ <title>INTRODUCTION TO THE THEORY OF COMPUTATION, SECOND EDITION</title>
+ <publisher>Thomson Course Technology</publisher>
+ <publishdate>2006</publishdate>
+ <description>Reference book for cp414</description>
+ <location>http://ciencias.uis.edu.co/lenguajes/doc/sipser.pdf</location>
+</book>
+<book>
+ <author>Jim Kurose and Keith W. Ross</author>
+ <title>COMPUTER NETWORKING A Top-Down Approach</title>
+ <publisher>Addison Wesley</publisher>
+ <publishdate>2013</publishdate>
+ <description>Reference book for cp372</description>
+ <location>http://www.bau.edu.jo/UserPortal/UserProfile/PostsAttach/10617_1870_1.pdf</location>
+</book>
+</bookself>
